@@ -1,0 +1,1271 @@
+/*----------------------------------------------------------------------
+	Common Elements
+----------------------------------------------------------------------*/
+
+/* --- Basic typography --- */
+a:active,
+a:focus {outline:0;}
+img {border:none;}
+
+/* --- Global K2 container --- */
+#k2Container {padding:0 0 24px 0;}
+body.contentpane #k2Container {padding:16px;} /* used in popups */
+
+/* --- General padding --- */
+.k2Padding {padding:4px;}
+
+/* --- Clearing --- */
+.clr {clear:both;height:0;line-height:0;display:block;float:none;padding:0;margin:0;border:none;}
+
+/* --- RSS feed icon --- */
+div.k2FeedIcon {padding:4px 8px;}
+div.k2FeedIcon a,
+div.k2FeedIcon a:hover {display:block;float:right;margin:0;padding:0;width:16px;height:16px;background:url(../images/system/feed-icon-14x14.gif) no-repeat 50% 50%;}
+div.k2FeedIcon a span,
+div.k2FeedIcon a:hover span {display:none;}
+.smallerFontSize {font-size: 16px !important;line-height:inherit !important;}
+.largerFontSize {font-size: 22px !important;line-height: 40px !important;}
+
+/* --- ReCaptcha --- */
+.recaptchatable .recaptcha_image_cell,
+#recaptcha_table {background-color:#fff !important;}
+#recaptcha_table {border-color: #ccc !important;}
+#recaptcha_response_field {border-color: #ccc !important;background-color:#fff !important;}
+
+/* --- Primary lists in modules --- */
+div.k2LatestCommentsBlock ul,
+div.k2TopCommentersBlock ul,
+div.k2ItemsBlock ul,
+div.k2LoginBlock ul,
+div.k2UserBlock ul.k2UserBlockActions,
+div.k2UserBlock ul.k2UserBlockRenderedMenu,
+div.k2ArchivesBlock ul,
+div.k2AuthorsListBlock ul,
+div.k2CategoriesListBlock ul,
+
+div.k2LatestCommentsBlock ul li,
+div.k2TopCommentersBlock ul li,
+div.k2ItemsBlock ul li,
+div.k2LoginBlock ul li,
+div.k2UserBlock ul.k2UserBlockActions li,
+div.k2UserBlock ul.k2UserBlockRenderedMenu li,
+div.k2ArchivesBlock ul li,
+div.k2AuthorsListBlock ul li,
+div.k2CategoriesListBlock ul li,
+.clearList {/*display:none;*/float:none;clear:both;} 
+.lastItem {border:none;}
+.k2Avatar img {display:block;float:left;}
+a.k2ReadMore {text-decoration: none;text-transform: uppercase;font-size: 14px;}
+
+div.catItemBlog a.k2ReadMore {margin-top: 25px;display: inline-block;}
+a.k2ReadMore:hover {text-decoration: none}
+.k2UserDetails {
+	padding-left: 62px;
+}
+div.k2LoginBlock input.button {
+  border: none;
+  color: #fff;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  padding: 8px 15px;
+}
+/* --- Pagination --- */
+div.k2Pagination {padding:8px;margin:24px 0 4px 0 !important;text-align:center;color:#999;font-size: 13px;}
+div.k2Pagination ul {margin: 0 0 5px 0px;text-align:center;padding: 0;}
+div.k2Pagination ul li {margin: 0 8px 10px 0;display: inline-block;}
+div.k2Pagination ul li a, 
+div.k2Pagination ul li span {
+	text-decoration: none;
+	background: rgba(0, 0, 0, 0.05);
+	-webkit-border-radius: 40px;
+	border-radius: 40px;
+	padding: 8px 17px;
+	border-radius: 40px;
+	display: inline-block;
+}
+div.k2Pagination ul li span {
+	cursor: default;
+}
+div.k2Pagination ul li:hover a {background: rgba(0, 0, 0, 0.7); color: #fff;}
+
+div.itemIsFeatured,
+div.catItemIsFeatured,
+div.userItemIsFeatured {}
+div.itemIsFeatured .itemFeatured {position: absolute;left: 20px;bottom: 20px;padding: 8px;background: rgba(255,255,255,0.4);color: #fff;font-size: 16px;text-transform: uppercase;border-radius: 2px;}
+
+/*----------------------------------------------------------------------
+	Component: Item view
+----------------------------------------------------------------------*/
+a.itemPrintThisPage {display:block;width:160px;margin:4px auto 16px;padding:4px;background:#F7FAFE;border:1px solid #ccc;text-align:center;color:#555;font-size:13px;}
+a.itemPrintThisPage:hover {background:#eee;text-decoration:none;}
+div.itemView {padding:8px 0 24px 0;margin:0 0 24px 0;} /* this is the item container for this view */
+span.itemEditLink {float:right;display:block;padding:4px 0;margin:0;width:120px;text-align:right;}
+span.itemEditLink a {padding:2px 12px;border:1px solid #ccc;background:#eee;text-decoration:none;font-size:11px;font-weight:normal;font-family:Arial, Helvetica, sans-serif;}
+span.itemEditLink a:hover {background:#ffffcc;}
+div.itemHeader span.ItemDateCreated {color:#999;font-size:11px;line-height: 22px;float: left;margin-right: 15px;text-align: center;}
+div.itemHeader h2.itemTitle {font-size:24px;font-weight:normal;line-height:24px;padding:0 0 5px 0;margin:0; color: #444;}
+div.itemHeader h2.itemTitle span {font-size:12px;color:#CF1919;text-decoration:none;} /* "Featured" presented in superscript */
+div.itemHeader span.itemAuthor {display:inline-block;padding:0;margin:0 10px 0 0;font-size: 11px;text-transform: uppercase;color: #A5A5A5;}
+div.itemHeader span.itemAuthor a {color: #A5A5A5;text-decoration: none;}
+div.ItemBlog div.blog-content-block div.itemToolbar{line-height: 14px;}
+div.itemToolbar ul {padding: 0;margin-top: 0;border: none;margin-bottom: 0;}
+div.itemToolbar ul li {display:inline-block;list-style:none;line-height: 14px;padding-right: 3px;}
+div.itemToolbar ul > li:first-child, div.itemToolbar ul > li.first {border:none;} /* remove the first CSS border from the left of the toolbar */
+div.itemToolbar ul li a img {vertical-align:middle;}
+div.itemToolbar ul li a#fontDecrease {margin:0 0 0 2px;}
+div.itemToolbar ul li a#fontDecrease img {width:13px;height:13px;background:url(../images/system/font_decrease.gif) no-repeat;}
+div.itemToolbar ul li a#fontIncrease {margin:0 0 0 2px;}
+div.itemToolbar ul li a#fontIncrease img {width:13px;height:13px;background:url(../images/system/font_increase.gif) no-repeat;}
+div.itemToolbar ul li a#fontDecrease span,
+div.itemToolbar ul li a#fontIncrease span {font-size: 10px;}
+div.itemImageBlock {position: relative;}
+div.itemImageBlock img:hover {opacity: 0.8;}
+div.ItemBlog div.itemImageBlock {margin-bottom: 35px;}
+div.itemImage {display:block;position: relative;}
+div.itemImage a {display:block;position: relative;overflow: hidden;}
+div.itemImageCaption {color:#666;float:left;display:block;font-size:11px;}
+div.itemImageCredits {color:#999;float:right;display:block;font-style:italic;font-size:11px;}
+div.ItemText ol li {line-height: 26px;}
+div.ItemBlog div.ItemText {margin-bottom: 55px;}
+div.ItemPortfolio div.ItemText {margin-bottom: 0;}
+.itemImage, .catItemImage {-webkit-transition: opacity .25s ease-in-out;transition: opacity .25s ease-in-out;}
+.itemImage:hover img, .catItemImage:hover img {opacity: .9;}
+.ItemBlog div.itemIntroText {color: #666;font-size: 16px;line-height: 26px;font-weight: 300;}
+.catItemBlog .catItemIntroText {font-size: 18px;line-height: 30px;font-weight: 300;}
+.ItemBlog div.itemFullText {color: #666;font-size: 18px;line-height: 30px;font-weight: 300;margin-bottom: 30px;}
+div.project-Single-item div.itemExtraFields {padding:20px 0 0 0;border-top:1px solid #ddd;}
+div.itemContentFooter {display: block;text-align: right;color: #a5a5a5;font-size: 11px;padding: 20px 5px 0;text-transform: uppercase;}
+span.itemHits {float:left;}
+div.itemSocialSharing {padding:8px 0;margin: 35px 0 70px 45px;}
+div.itemTwitterButton {float:left;margin:2px 24px 0 0;}
+div.itemFacebookButton {float:left;margin-right:24px;width:200px;}
+
+div.itemAttachmentsBlock {padding:4px;border-bottom:1px dotted #ccc;}
+div.itemAttachmentsBlock span {font-weight:bold;color:#555;padding:0 4px 0 0;}
+div.itemAttachmentsBlock ul.itemAttachments {list-style:none;padding:0;margin:0;display:inline;}
+div.itemAttachmentsBlock ul.itemAttachments li {display:inline;list-style:none;padding:0 4px;margin:0;text-align:center;}
+div.itemAttachmentsBlock ul.itemAttachments li span {font-size:10px;color:#999;font-weight:normal;}
+/*item page toolbar section*/
+span.itemAuthor, div.itemLinks, div.itemCategory, ul.itemLink, div.pfolioDateBlock {display: inline-block;}
+.ItemPortfolio .itemToolbar {line-height: 14px;}
+div.itemLinks {border: none;padding: 0;margin-right: 0;}
+ul.ul.itemLink {margin: 0;padding: 0;border: none;}
+/* Author block */
+div.itemAuthorBlock {margin-top: 42px;}
+div.itemAuthorBlock p {margin: 15px 0 10px 0;font-size: 14px;}
+div.itemAuthorBlock h3.itemAuthorName {
+	margin-bottom: 10px;
+	line-height: normal;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 8px;
+	text-transform: uppercase;
+}
+div.itemAuthorBlock img.itemAuthorAvatar {
+	display: block;
+    margin: 0px 25px 0 0;
+    border: 2px solid #eee;
+    padding: 22px 31px;
+    float: left;
+}
+div.itemAuthorBlock div.itemAuthorDetails {margin-left: 200px;}
+div.itemAuthorBlock div.itemAuthorDetails h3.authorName {margin: 0 0 5px 0;color: #1D2226;font-size: 110%;font-weight: normal;text-transform: uppercase;}
+div.itemAuthorBlock div.itemAuthorDetails h3.authorName a {font-size:16px;}
+div.itemAuthorBlock div.itemAuthorDetails span.itemAuthorUrl {font-size: 15px;}
+div.itemAuthorBlock div.itemAuthorDetails span.itemAuthorEmail {font-weight:bold;color:#555;}
+div.itemAuthorBlock div.itemAuthorDetails span.itemAuthorUrl a,
+div.itemAuthorBlock div.itemAuthorDetails span.itemAuthorEmail a {font-weight:normal;}
+div.itemAuthorBlock h3, div.itemAuthorBlock a {
+	text-decoration: none;
+    color: #353535;
+    font-weight: 400;
+}
+.itemDescription p {margin: 5px 0px;}
+
+/* Author latest */
+div.item-Author-Latest-Related {margin-top: 70px;margin-left: 0;}
+div.item-Author-Latest-Related h3 {
+	font-size: 22px;
+	font-weight: 400;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	color: #000;
+}
+div.itemAuthorLatest {margin-bottom:16px;padding:0;}
+div.itemAuthorLatest ul li a {text-decoration: none;color: #666;}
+div.itemAuthorLatest ul li a:hover {color: #000;}
+.itemAuthorLatest ul,
+.itemRelated ul {margin: 0px;padding: 0px;}
+.itemAuthorLatest ul li,
+.itemRelated ul li {list-style-type: none;background: none;border-bottom: 1px solid rgba(0,0,0,0.1);padding: 12px 0;position: relative;}
+.itemAuthorLatest ul li a,
+.itemRelated ul li a {padding: 0 12px;}
+.itemAuthorLatest ul li a:after,
+.itemRelated ul li a:after {content: "\f105";font-family: FontAwesome;position: absolute;left: 0;top: 12px;color: #8B6F6F;}
+div.itemRelated {margin-bottom:16px;} /* Add overflow-x:scroll; if you want to enable the scrolling features, as explained in item.php */
+div.itemRelated ul li.k2ScrollerElement {float:left;overflow:hidden;border:1px solid #ccc;padding:4px;margin:0 4px 4px 0;background:#fff;} /* you need to insert this class in the related li element in item.php for this styling to take effect */
+div.itemRelated ul li.clr {clear:both;height:0;line-height:0;display:block;float:none;padding:0;margin:0;border:none;}
+div.itemRelated ul li a {color: #A5A5A5;text-decoration: none;}
+div.itemRelated ul li a:hover {color: #444;}
+div.itemImageGallery {margin:0 0 16px 0;padding:0;}
+div.project-Single-item div.project-item-header {display: block;border-bottom: 1px solid #DDD;padding-bottom: 10px;position: relative;}
+
+/* Article navigation */
+div.project-item-header div.itemNavigation {display: inline-block;right: 0;position: absolute;top:0;}
+div.project-item-header div.itemNavigation a i {height: 20px;width: 20px;line-height: 20px;text-align: center;font-weight: bold;margin-left: 5px;font-size: 14px;}
+
+div.itemNavigation a{text-decoration: none;}
+
+/* Comments */
+div.itemComments {margin: 45px 0;}
+h3.itemCommentsCounter, 
+.itemCommentsForm h3 {
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #000;
+}
+div.itemComments ul.itemCommentsList {margin:0 0 16px;padding:0;list-style:none;}
+div.itemComments ul.itemCommentsList li {padding-bottom: 30px;border-bottom: 1px solid #eee;}
+div.itemComments ul.itemCommentsList li.unpublishedComment {background:#ffeaea;}
+div.itemComments ul.itemCommentsList li p {margin: 10px 0 15px 70px;}
+div.itemComments ul.itemCommentsList li img {float: left;margin: 3px 20px 0 0;}
+div.itemComments ul.itemCommentsList li span.commentDate {font-size: 11px;letter-spacing: 1px;font-style: italic;color: #A5A5A5;}
+div.itemComments ul.itemCommentsList li span.commentAuthorName {font-size: 15px;display: block;text-transform: capitalize;color: #000;margin-top: 30px;}
+div.itemComments ul.itemCommentsList li span.commentAuthorName a {font-size: 15px;color: #000;text-decoration: none;}
+div.itemComments ul.itemCommentsList li span.commentAuthorName a:hover {color: #727674;}
+div.itemComments ul.itemCommentsList li span.commentAuthorEmail {display:none;}
+div.itemComments ul.itemCommentsList li span.commentLink {margin-left: 70px;line-height: normal;}
+div.itemComments ul.itemCommentsList li span.commentLink a {font-size: 13px;text-decoration: none;font-weight: bold;color: #000;text-transform: uppercase;letter-spacing: -1px;outline: none;}
+div.itemComments ul.itemCommentsList li span.commentLink a:hover {color: #727674;}
+div.itemComments ul.itemCommentsList li span.commentToolbar {display:block;clear:both;}
+div.itemComments ul.itemCommentsList li span.commentToolbar a {font-size:11px;color:#999;text-decoration:underline;margin-right:4px;}
+div.itemComments ul.itemCommentsList li span.commentToolbar a:hover {font-size:11px;color:#555;text-decoration:underline;}
+div.itemComments ul.itemCommentsList li span.commentToolbarLoading {background:url(../images/system/searchLoader.gif) no-repeat 100% 50%;}
+div.itemCommentsPagination {padding:4px;margin:0 0 24px 0;}
+div.itemCommentsPagination span.pagination {display:block;float:right;clear:both;}
+div.itemCommentsForm p.itemCommentsFormNotes {margin-top: 8px;margin-bottom: 20px;color: orange;}
+div.itemCommentsForm form label.formComment {display:block;margin:12px 0 5px 2px;}
+div.itemCommentsForm form label.formName {}
+div.itemCommentsForm form label.formEmail {}
+div.itemCommentsForm form label.formUrl {}
+div.itemCommentsForm form label.formRecaptcha {display:block;margin:12px 0 0 2px;}
+div.itemCommentsForm form textarea.inputbox {display:block;width:100%;border: none;height:160px;margin:0;font-size: 13px;color: #A5A5A5;-webkit-box-sizing:border-box !important;box-sizing:border-box !important;background-color: rgba(221, 221, 221, 0.2);padding: 8px 12px;margin-top: 10px;}
+div.itemCommentsForm form input.inputbox {
+	display: block;
+	margin: 0;
+	font-size: 13px;
+	padding: 8px 15px !important;
+	background-color: rgba(221, 221, 221, 0.2);
+	border: none;
+	width: 100%;
+	height: auto;
+	box-sizing: border-box !important;
+	color: #a5a5a5;
+}
+body #comment-form div[class*="uk-width"]:nth-child(n+2) {
+	padding-left: 10px;
+}
+div.itemCommentsForm form input#submitCommentButton {
+	text-transform: uppercase;
+	margin-top: 10px;
+	width: 100%;
+	text-align: center;
+}
+div.itemCommentsForm form span#formLog {
+	font-weight: 500;
+	display: block;
+}
+div.itemCommentsForm form .formLogLoading {background:url(../images/system/loading.gif) no-repeat left center;}
+div.itemCommentsForm form span#formLog:empty {
+	display: none;
+}
+
+/* "Report comment" form */
+div.k2ReportCommentFormContainer {padding:8px;width:480px;margin:0 auto;}
+div.k2ReportCommentFormContainer blockquote {width:462px;background:#f7fafe;border:1px solid #ddd;padding:8px;margin:0 0 8px 0;}
+div.k2ReportCommentFormContainer blockquote span.quoteIconLeft {font-style:italic;font-weight:bold;font-size:40px;color:#135CAE;line-height:30px;vertical-align:top;display:block;float:left;}
+div.k2ReportCommentFormContainer blockquote span.quoteIconRight {font-style:italic;font-weight:bold;font-size:40px;color:#135CAE;line-height:30px;vertical-align:top;display:block;float:right;}
+div.k2ReportCommentFormContainer blockquote span.theComment {font-style:italic;font-size:12px;font-weight:normal;color:#000;padding:0 4px;}
+div.k2ReportCommentFormContainer form label {display:block;font-weight:bold;}
+div.k2ReportCommentFormContainer form input,
+div.k2ReportCommentFormContainer form textarea {display:block;border:1px solid #ddd;font-size:12px;padding:2px;margin:0 0 8px 0;width:474px;}
+div.k2ReportCommentFormContainer form #recaptcha {margin-bottom:24px;}
+div.k2ReportCommentFormContainer form span#formLog {margin:0 0 0 20px;padding:0 0 0 20px;font-weight:bold;color:#CF1919;}
+div.k2ReportCommentFormContainer form .formLogLoading {background:url(../images/system/loading.gif) no-repeat left center;}
+
+/* Back to top link */
+div.itemBackToTop {text-align:right;}
+div.itemBackToTop a {text-decoration:underline;}
+div.itemBackToTop a:hover {text-decoration:underline;}
+
+
+
+/*----------------------------------------------------------------------
+Component: Itemlist view (category)
+----------------------------------------------------------------------*/
+/* --- Category block --- */
+div.itemListCategory {background:#f7fafe;border:1px solid #ddd;margin:4px 0;padding:8px;}
+span.catItemAddLink {display:block;padding:8px 0;margin:0 0 4px 0;border-bottom:1px dotted #ccc;text-align:right;}
+span.catItemAddLink a {padding:4px 16px;border:1px solid #ccc;background:#eee;text-decoration:none;}
+span.catItemAddLink a:hover {background:#ffffcc;}
+div.itemListCategory img {float:left;display:block;background:#fff;padding:4px;border:1px solid #ddd;margin:0 8px 0 0;}
+
+/* --- Sub-category block --- */
+div.subCategoryContainer {float:left;}
+div.subCategory {background:#f7fafe;border:1px solid #ddd;margin:4px;padding:8px;}
+div.subCategory a.subCategoryImage,
+div.subCategory a.subCategoryImage:hover {text-align:center;display:block;}
+div.subCategory a.subCategoryImage img,
+div.subCategory a.subCategoryImage:hover img {background:#fff;padding:4px;border:1px solid #ddd;margin:0 8px 0 0;}
+div#itemListLinks {background:#f7fafe;border:1px solid #ddd;margin:8px 0;padding:8px;}
+div.itemContainer {float:left;}
+
+/* Additional class appended to the element above for further styling per group item */
+div.groupLinks {padding:0;margin:0;}
+span.catItemEditLink {float:right;display:block;padding:4px 0;margin:0;width:120px;text-align:right;}
+span.catItemEditLink a {padding:2px 12px;border:1px solid #ccc;background:#eee;text-decoration:none;font-size:11px;font-weight:normal;font-family:Arial, Helvetica, sans-serif;}
+span.catItemEditLink a:hover {background:#ffffcc;}
+div.catItemHeader a {text-decoration: none;}
+div.catItemHeader span.catItemAuthor {display:block;padding:0;margin: 0 10px 0 0; color: #A5A5A5;}
+div.catItemHeader .catItemCommentsLink {border: none;}
+div.catItemBody {padding:10px 0;margin:0 0 0 45px;}
+div.catItemImageBlock {margin: 0 30px 30px 0;}
+div.catItemImage {display:block;position: relative;}
+div.catItemIntroText p:last-child {margin-bottom: 0;}
+div.catItemExtraFields, div.genericItemExtraFields {margin:16px 0 0 0;padding:8px 0 0 0;border-top:1px dotted #ddd;}
+div.catItemExtraFields h4, div.genericItemExtraFields h4 {margin:0;padding:0 0 8px 0;line-height:normal !important;}
+div.catItemExtraFields ul, div.genericItemExtraFields ul {margin:0;padding:0;list-style:none;}
+div.catItemExtraFields ul li, div.genericItemExtraFields ul li {display:block;}
+div.catItemExtraFields ul li span.catItemExtraFieldsLabel, div.genericItemExtraFields ul li span.genericItemExtraFieldsLabel {display:block;float:left;font-weight:bold;margin:0 4px 0 0;width:30%;}
+div.catItemLinks {padding:0;}
+div.catItemHitsBlock {display: inline-block;}
+div.catItemCategory span {color:#555;padding:0 4px 0 0;}
+div.catItemTagsBlock span {}
+div.catItemTagsBlock ul.catItemTags {list-style:none;padding:0;margin:0;display:inline;}
+div.catItemTagsBlock ul.catItemTags li {display:inline;list-style:none;margin:0;text-align:center;}
+div.catItemTagsBlock ul.catItemTags li a {}
+div.catItemAttachmentsBlock {padding:4px;border-bottom:1px dotted #ccc;}
+div.catItemAttachmentsBlock span {font-weight:bold;color:#555;padding:0 4px 0 0;}
+div.catItemAttachmentsBlock ul.catItemAttachments {list-style:none;padding:0;margin:0;display:inline;}
+div.catItemAttachmentsBlock ul.catItemAttachments li {display:inline;list-style:none;padding:0 4px;margin:0;text-align:center;}
+div.catItemAttachmentsBlock ul.catItemAttachments li span {font-size:10px;color:#999;font-weight:normal;}
+div.catItemVideoBlock {margin:0 0 16px 0;padding:16px;background:#010101 url(../images/system/videoplayer-bg.gif) repeat-x bottom;}
+div.catItemVideoBlock div.catItemVideoEmbedded {text-align:center;}
+div.catItemVideoBlock span.catItemVideo {display:block;}
+span.catItemDateModified {display:block;text-align:right;padding:4px;margin:4px 0;color:#999;border-top:1px solid #ddd;}
+div.itemView .title1 {position: relative;}
+div.itemView .title1:after {
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	content: '';
+	height: 1px;
+	width: 30px;
+	background-color: #444;
+}
+
+
+/*----------------------------------------------------------------------
+Component: Itemlist view (user)
+----------------------------------------------------------------------*/
+
+/* User info block */
+div.userBlock {
+	margin-bottom: 35px;
+	border: 1px solid;
+	padding: 35px;
+}
+div.userBlock div.userBlock div.userAdditionalInfo {
+    margin: 0 0 0 125px;
+}
+div.userBlock h3.userBlock-title {margin: 0 0 15px 0;}
+span.userItemAddLink {display:block;padding:8px 0;margin:0 0 4px 0;border-bottom:1px dotted #ccc;text-align:right;}
+span.userItemAddLink a {padding:4px 16px;border:1px solid #ccc;background:#eee;text-decoration:none;}
+span.userItemAddLink a:hover {background:#ffffcc;}
+div.userBlock img {float: left;display: block;margin: 10px 25px 0 0;}
+div.userBlock div.userDescription {padding:4px 0;}
+div.userBlock div.userAdditionalInfo {padding:4px 0;margin: 10px 0 0 125px;}
+span.userURL {font-weight:bold;color:#555;display:block;}
+span.userEmail {font-weight:bold;color:#555;display:block;}
+
+/* User items */
+div.userItemView {margin-bottom: 45px;} /* this is the item container for this view */
+div.userItemViewUnpublished {opacity:0.9;border:4px dashed #ccc;background:#fffff2;padding:8px;margin:8px 0;}
+span.userItemEditLink {float:right;display:block;padding:4px 0;margin:0;width:120px;text-align:right;}
+span.userItemEditLink a {padding:2px 12px;border:1px solid #ccc;background:#eee;text-decoration:none;font-size:11px;font-weight:normal;font-family:Arial, Helvetica, sans-serif;}
+span.userItemEditLink a:hover {background:#ffffcc;}
+div.userItemHeader span.userItemDateCreated {color:#999;font-size:11px;}
+div.userItemHeader h3.userItemTitle {font-size:24px;font-weight:normal;line-height: 22px;margin: 0 0 6px 0;}
+div.userItemHeader h3.userItemTitle a {text-decoration: none;}
+div.userItemHeader h3.userItemTitle span sup {font-size:12px;color:#CF1919;text-decoration:none;} /* "Unpublished" presented in superscript */
+div.userItemBody {padding: 10px 0 0 0;margin: 0 0 15px 0;border-bottom: 1px solid #DDD;}
+div.userItemImageBlock {padding:0;margin:0;float:left;}
+span.userItemImage {display:block;text-align:center;margin: 6px 20px 45px 0;}
+span.userItemImage a {display:block;position: relative;}
+div.userItemIntroText {font-size:inherit;font-weight:normal;line-height:inherit;padding:4px 0 12px 0;}
+div.userItemLinks {margin: 0 0 16px 0;padding: 0;font-size: 11px;color: #A5A5A5;text-transform: uppercase;}
+div.userItemLinks a {text-decoration: none;color: #A5A5A5;}
+div.userItemLinks a:hover {color: #222;}
+div.userItemCategory {display: inline-block;}
+div.userItemCategory span {padding:0 4px 0 0;}
+div.userItemTagsBlock {display: inline-block;}
+div.userItemTagsBlock span {padding:0 4px 0 0;}
+div.userItemTagsBlock ul.userItemTags {list-style:none;padding:0;margin:0;display:inline;}
+div.userItemTagsBlock ul.userItemTags li {display:inline;list-style:none;padding:0 4px 0 0;margin:0;text-align:center;}
+span.userItemDateCreated:after, div.userItemCategory:after {width: 1px;height: 10px;background: #DDD;content: "";position: absolute;top: 2px;right: 0;}
+
+/* Anchor link to comments */
+div.userItemCommentsLink a {text-decoration: none;text-transform: uppercase;font-size: 11px;color: #A5A5A5;}
+div.userItemCommentsLink a:hover {color: #222;}
+
+/* Read more link */
+div.userItemReadMore {display:inline;}
+div.userItemReadMore a {text-decoration: none;text-transform: uppercase;font-size: 11px;color: #A5A5A5;}
+div.userItemReadMore a:hover {color: #222;}
+
+/*----------------------------------------------------------------------
+Component: Itemlist view (tag)
+----------------------------------------------------------------------*/
+div.tagItemView {border-bottom:1px solid rgba(0,0,0,0.05);padding-bottom: 50px;margin-bottom: 50px;} /* this is the item container for this view */
+div.tagItemView:last-child {border-bottom: none;}
+div.tagItemHeader span.tagItemDateCreated {
+	color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+div.tagItemHeader h2.tagItemTitle {
+	font-size: 22px;
+	margin: 0;
+	text-transform: uppercase;
+	line-height: 32px;
+}
+div.tagItemHeader h2.tagItemTitle a {text-decoration: none !important;color: #444;}
+div.tagItemBody {padding: 20px 0 15px 0;margin:0;}
+div.tagItemImageBlock {
+	width: 40%;
+	float: left;
+	padding-right: 35px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+div.tagItemIntroText {
+    float: left;
+    width: 60%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+span.tagItemImage {display:block;}
+span.tagItemImage a {display:block;position: relative;}
+div.tagItemIntroText {
+	color: #666;
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 300;
+}
+div.tagItemCategory, div.userItemCommentsLink, span.userItemDateCreated, div.userItemCategory {
+	font-size: 12px;
+	text-transform: uppercase;
+	display: inline;
+	position: relative;
+	margin-right: 10px;
+	padding-right: 10px;
+}
+div.tagItemCategory:after {
+	width: 1px;
+	height: 10px;
+	background: #eee;
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: rotate(15deg) translateY(-50%);
+
+}
+div.userItemCommentsLink:after {width: 1px;height: 10px;background: #DDD;content: "";position: absolute;top: 4px;right: 0;}
+div.tagItemCategory span {font-weight:bold;color:#555;padding:0 4px 0 0;}
+div.tagItemCategory a {text-decoration: none !important;color: #999;}
+div.tagItemCategory a:hover, div.tagItemReadMore a:hover {color: #444;}
+/* Read more link */
+div.tagItemReadMore {display:inline;}
+div.tagItemReadMore a {font-size: 12px;color: #999;}
+
+
+/*----------------------------------------------------------------------
+Component: Itemlist view (generic)
+----------------------------------------------------------------------*/
+
+
+div.genericItemView {border-bottom:1px solid #DDD;padding:8px 0;margin:0 0 16px 0;} /* this is the item container for this view */
+div.genericItemHeader span.genericItemDateCreated {color:#999;font-size:11px;}
+div.genericItemHeader h2.genericItemTitle {font-size:24px;font-weight:normal;line-height:110%;padding:10px 0 4px 0;margin:0;}
+div.genericItemBody {padding:8px 0;margin:0;}
+div.genericItemImageBlock {padding:0;margin:0;float:left;}
+span.genericItemImage {display:block;text-align:center;margin:0 15px 8px 0;}
+span.genericItemImage img {border:1px solid #ccc;padding:8px;}
+div.genericItemIntroText {font-size:inherit;font-weight:normal;line-height:inherit;padding:4px 0 12px 0;}
+div.genericItemCategory {display:inline;margin:0 8px 0 0;padding:0 8px 0 0;border-right:1px solid #ccc;}
+div.genericItemCategory span {font-weight:bold;color:#555;padding:0 4px 0 0;}
+div.genericItemReadMore {display:inline;}
+div#genericItemListNothingFound {padding:40px;text-align:center;}
+div#genericItemListNothingFound p {font-size:20px;color:#999;}
+
+/* --- Google Search (use Firebug or similar tools to inspect the generated HTML, then style accordingly --- */
+#k2GoogleSearchContainer .gsc-control {width:auto !important;}
+#k2GoogleSearchContainer .gsc-control .gsc-above-wrapper-area,
+#k2GoogleSearchContainer .gsc-control .gsc-resultsHeader,
+#k2GoogleSearchContainer .gsc-control .gsc-url-bottom {display:none !important;} /* Hide unneeded elements of the results page */
+
+
+
+/*----------------------------------------------------------------------
+Component: Latest view
+----------------------------------------------------------------------*/
+
+div.latestItemsContainer {float:left;}
+
+/* Category info block */
+div.latestItemsCategory {background:#f7fafe;border:1px solid #ddd;margin:0 8px 8px 0;padding:8px;}
+div.latestItemsCategoryImage {text-align:center;}
+div.latestItemsCategoryImage img {background:#fff;padding:4px;border:1px solid #ddd;margin:0 8px 0 0;}
+
+/* User info block */
+div.latestItemsUser {background:#f7fafe;border:1px solid #ddd;margin:0 8px 8px 0;padding:8px;clear:both;}
+div.latestItemsUser img {display:block;float:left;background:#fff;padding:4px;border:1px solid #ddd;margin:0 8px 0 0;}
+div.latestItemsUser p.latestItemsUserDescription {padding:4px 0;}
+div.latestItemsUser p.latestItemsUserAdditionalInfo {padding:4px 0;margin:8px 0 0 0;}
+span.latestItemsUserURL {font-weight:bold;color:#555;display:block;}
+span.latestItemsUserEmail {font-weight:bold;color:#555;display:block;}
+
+/* Latest items list */
+div.latestItemList {padding:0 8px 8px 0;}
+div.latestItemHeader h3.latestItemTitle {font-size:24px;font-weight:normal;line-height:110%;padding:10px 0 4px 0;margin:0;}
+div.latestItemBody {padding:8px 0;margin:0;}
+div.latestItemImageBlock {padding:0;margin:0;float:left;}
+div.latestItemIntroText {font-size:inherit;font-weight:normal;line-height:inherit;padding:4px 0 12px 0;}
+div.latestItemLinks {margin:0 0 16px 0;padding:0;}
+div.latestItemCategory {padding:4px;border-bottom:1px dotted #ccc;}
+div.latestItemCategory span {font-weight:bold;color:#555;padding:0 4px 0 0;}
+div.latestItemTagsBlock {padding:4px;border-bottom:1px dotted #ccc;}
+div.latestItemTagsBlock span {font-weight:bold;color:#555;padding:0 4px 0 0;}
+div.latestItemTagsBlock ul.latestItemTags {list-style:none;padding:0;margin:0;display:inline;}
+div.latestItemTagsBlock ul.latestItemTags li {display:inline;list-style:none;padding:0 4px 0 0;margin:0;text-align:center;}
+span.latestItemImage {display:block;text-align:center;margin:0 8px 8px 0;}
+span.latestItemImage img {border:1px solid #ccc;padding:8px;}
+span.latestItemDateCreated {color:#999;font-size:11px;}
+div.latestItemVideoBlock {margin:0 0 16px 0;padding:16px;background:#010101 url(../images/system/videoplayer-bg.gif) repeat-x bottom;}
+div.latestItemVideoBlock span.latestItemVideo {display:block;}
+div.latestItemCommentsLink {display:inline;margin:0 8px 0 0;padding:0 8px 0 0;border-right:1px solid #ccc;}
+div.latestItemReadMore {display:inline;}
+h2.latestItemTitleList {font-size:14px;padding:2px 0;margin:8px 0 2px 0;font-family:Arial, Helvetica, sans-serif;border-bottom:1px dotted #ccc;line-height:normal;}
+
+
+
+/*----------------------------------------------------------------------
+Component: Register & profile page views (register.php & profile.php)
+----------------------------------------------------------------------*/
+.k2AccountPage table { width: 100%;}
+.k2AccountPage table tr td .controls > label {display: inline-block;margin-left: 10px;}
+.k2AccountPage table tr td input.inputbox {margin-left: 10px;}
+.k2AccountPage table tr td .rokpad-editor-wrapper,
+.k2AccountPage table tr td #url, 
+.k2AccountPage table tr td #image {margin-left: 10px;}
+.k2AccountPage table tr td label {white-space:nowrap;}
+img.k2AccountPageImage {border:4px solid #ddd;margin:10px 0;padding:0;display:block;}
+.k2AccountPage div.k2AccountPageNotice {padding:8px;}
+.k2AccountPage div.k2AccountPageUpdate {border-top:1px dotted #ccc;margin:8px 0;padding:8px;text-align:right;}
+.k2AccountPage th.k2ProfileHeading {text-align:left;font-size:18px;padding:8px;background:#f6f6f6;/*border-bottom:1px solid #e9e9e9;*/}
+.k2AccountPage td#userAdminParams {padding:0;margin:0;}
+.k2AccountPage table.admintable td.key,
+.k2AccountPage table.admintable td.paramlist_key {padding-right: 10px;background:#f6f6f6;border-bottom:1px solid #e9e9e9;border-right:1px solid #e9e9e9;color:#666;font-weight:bold;text-align:right;font-size:11px;width:140px;}
+
+/* Profile edit */
+.k2AccountPage table.admintable {margin-bottom: 20px;}
+
+
+/*----------------------------------------------------------------------
+Modules: mod_k2_comments
+----------------------------------------------------------------------*/
+
+div.k2LatestCommentsBlock ul li {list-style-type: none;padding: 20px 0;}
+div.k2LatestCommentsBlock ul li:first-child {padding-top: 0px;}
+div.k2LatestCommentsBlock ul li a.lcAvatar img {margin: 5px 15px 0px 0;}
+div.k2LatestCommentsBlock ul li a {font-size: 13px;color: #000;text-decoration: none;}
+div.k2LatestCommentsBlock ul li a:hover {color: #727674;}
+div.k2LatestCommentsBlock ul li span.lcComment {margin-left: 66px;display: block;}
+div.k2LatestCommentsBlock ul li span.lcUsername {font-size: 89%;display: block;text-transform: capitalize;color: #000;}
+div.k2LatestCommentsBlock ul li span.lcCommentDate {color:#999;font-size: 11px;letter-spacing: 1px;font-style: italic;color: #A5A5A5;display: block;}
+div.k2LatestCommentsBlock ul {list-style-type: none;margin-left: 0;padding-left: 0;}
+div.k2LatestCommentsBlock ul .even, 
+div.k2LatestCommentsBlock ul .odd{background: none;border-bottom: 1px solid #ddd;border-bottom: 1px solid rgba(0, 0, 0, 0.05);}
+
+
+/* Top Commenters */
+div.k2TopCommentersBlock ul li span.tcLatestCommentDate {color:#999;}
+
+
+
+/*----------------------------------------------------------------------
+Modules: mod_k2_content
+----------------------------------------------------------------------*/
+div.k2ItemsBlock ul {padding: 0;margin: 0;list-style: none;}
+div.k2ItemsBlock ul li {position: relative;z-index: 1;}
+div.k2ItemsBlock ul li div.moduleItemIntrotext {margin-bottom: 15px;}
+div.k2ItemsBlock ul li div.moduleItemIntrotext a.moduleItemImage img {margin-bottom: 20px;width: 100%;height: auto;}
+div.moduleItemExtraFields ul li span.moduleItemExtraFieldsLabel {display:block;float:left;font-weight:bold;margin:0 4px 0 0;width:30%;}
+div.k2ItemsBlock ul li div.moduleItemTags a {padding:0 2px;text-decoration: none;color: #A5A5A5;font-size: 12px;text-transform: uppercase;}
+div.k2ItemsBlock ul li div.moduleItemTags a:hover {color: #222;}
+div.k2ItemsBlock ul li a.moduleItemComments {border-right:1px solid #ccc;padding:0 4px 0 0;margin:0 8px 0 0;}
+div.k2ItemsBlock ul li span.moduleItemHits {border-right:1px solid #ccc;padding:0 4px 0 0;margin:0 8px 0 0;}
+div.k2ItemsBlock ul li.clearList {margin: 0;}
+div.k2ItemsBlock ul li a.moduleItemImage {
+	border: 1px solid #f5f5f5;
+	display: block;
+	padding: 15px;
+	margin: 10px 0 15px;
+}
+
+/*--------------------------------------------
+	Ownfolio blog post
+--------------------------------------------*/
+.OwnfolioBPost .blog-post > .blog-post-item {float: left;position: relative;overflow: hidden;width: 25%;}
+.OwnfolioBPost .blog-post > .blog-post-item {
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.OwnfolioBPost .detailHolder {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 35px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0)),rgba(0,0,0,0.2) 10%,color-stop(100%,rgba(0,0,0,0.6)));
+    background: -ms-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,0.1) 10%,rgba(0,0,0,0.6) 100%);
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,0.1) 20%,rgba(0,0,0,0.8) 100%);
+}
+.OwnfolioBPost h3.moduleItemTitle a {
+	color: #FFF;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: normal;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+.OwnfolioBPost h3.moduleItemTitle {
+	margin-bottom: 5px;
+	letter-spacing: 3px;
+}
+.OwnfolioBPost .meta * {
+	color: #fff;
+	opacity: 0.7;
+	text-transform: uppercase;
+    font-size: 12px;
+    line-height: 12px;
+
+}
+.OwnfolioBPost a.moduleItemComments {
+    position: relative;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+.OwnfolioBPost a.moduleItemComments:after {
+    position: absolute;
+    content: '';
+    height: 9px;
+    width: 1px;
+    background: #fff;
+    left: 0;
+    top: 0;
+    margin-top: 3px;
+}
+.OwnfolioBPost .moduleLink {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    font-size: 36px;
+
+}
+.OwnfolioBPost .blog-post > .blog-post-item:hover .moduleItemImage img {
+	opacity: 0.9;
+}
+
+/*------------------------
+Recent Post Design
+-------------------------*/
+.k2RecentPost .k2RecentItem {
+	display: -webkit-flex; /* Safari */
+    display: flex;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.k2RecentPost .k2RecentItem:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+.k2RecentPost .k2RecentImg {
+	width: 90px;
+}
+.k2RecentPost .k2RecentDesc {
+    padding-left: 23px;
+}
+.k2RecentPost h3.k2RecentTite {
+    margin-bottom: 0 !important;
+    margin-top: -5px;
+}
+.k2RecentPost h3.k2RecentTite a {
+	color: #fff;
+	text-decoration: none;
+}
+.k2RecentPost h3.k2RecentTite a:hover {
+	color: rgba(255,255,255,0.7);
+}
+.k2RecentPost .k2RecentDate {
+    font-size: 12px;
+}
+.k2RecentPost .k2RecentIntrotext {
+	margin-top: 5px;
+}
+.k2RecentPost .k2RecentIntrotext p {
+	margin-bottom: 0;
+}
+
+/*----------------------------------------------------------------------
+Modules: mod_k2_user (mod_k2_login will be removed in v2.6)
+----------------------------------------------------------------------*/
+div.k2LoginBlock fieldset.input {margin:0;padding:0 0 8px 0;}
+div.k2LoginBlock fieldset.input p {margin:0 0 6px 0;padding:0 0 4px 0;}
+div.k2LoginBlock fieldset.input p label {display:block;}
+div.k2LoginBlock fieldset.input p input {display:block;}
+div.k2LoginBlock ul {margin: 5px 0 0 0;padding-left: 0px;}
+div.k2LoginBlock ul li {list-style-type: none;position: relative;padding: 0px 0 5px 21px;}
+div.k2LoginBlock ul li:after {position: absolute;left: 0;top: 2px;font-family: FontAwesome;content: "\f22d";}
+div.k2LoginBlock ul li a {text-decoration: none;color: #A5A5A5;font-size: 12px;}
+div.k2LoginBlock ul li a:hover {color: #222;}
+div.k2UserBlock p.ubGreeting {border-bottom:1px dotted #ccc;}
+div.k2UserBlock div.k2UserBlockDetails span.ubName {display:block;font-weight:bold;font-size:14px;}
+body .k2LoginBlock .input .inputbox {display: block;width: 90%;padding: 6px 10px;margin: 0;}
+body .k2LoginBlock .input #form-login-remember {margin-bottom: 2px;}
+body .k2LoginBlock .input #form-login-remember label,
+body .k2LoginBlock .input #form-login-remember input {display: inline-block;cursor: default;}
+.k2LoginBlock .input #form-login-remember input[type="checkbox"] {width: auto;margin: 0 5px;}
+
+/*----------------------------------------------------------------------
+Modules: mod_k2_tools
+----------------------------------------------------------------------*/
+
+div.k2AuthorsListBlock ul li a.abAuthorLatestItem {display:block;clear:both;}
+
+div.k2BreadcrumbsBlock span.bcTitle {padding:0 4px 0 0;color:#999;}
+div.k2BreadcrumbsBlock span.bcSeparator {padding:0 4px;font-size:14px;}
+
+/* --- Calendar --- */
+div.k2CalendarBlock {min-height: 100px;} /* use this height value so that the calendar height won't change on Month change via ajax */
+table.k2CalendarLoader {background:#fff url(../images/system/k2CalendarLoader.gif) no-repeat 50% 50% !important; min-height: 186px;}
+table.calendar {margin:0 auto;background:#fff;border-collapse:collapse;width: 100%;height: auto;}
+table.calendar tr td {text-align:center;vertical-align:middle;padding:2px;border:1px solid #f4f4f4;background:#fff;}
+table.calendar tr td.calendarNavMonthPrev {background:#f5f5f5;text-align:left;}
+table.calendar tr td.calendarNavMonthPrev a {
+	font-size: 20px;
+	text-decoration: none;
+	padding: 0 10px;
+	line-height: 30px;
+}
+table.calendar tr td.calendarCurrentMonth {background:#f5f5f5;}
+table.calendar tr td.calendarNavMonthNext {background:#f5f5f5;text-align:right;}
+table.calendar tr td.calendarNavMonthNext a {  
+	font-size: 20px;
+  text-decoration: none;
+  padding: 0 10px;
+  line-height: 30px;
+}
+table.calendar tr td.calendarDayName {background:#e9e9e9;font-size:11px;width:14.2%;}
+table.calendar tr td.calendarDateEmpty {background:#fbfbfb;}
+table.calendar tr td.calendarDateLinked {padding:0;}
+table.calendar tr td.calendarDateLinked a {display:block;padding:2px;text-decoration:none;}
+table.calendar tr td.calendarDateLinked a:hover {display:block;color:#fff;padding:2px;text-decoration:none;}
+table.calendar tr td.calendarToday {color:#fff;}
+table.calendar tr td.calendarTodayLinked {color:#fff;padding:0;}
+table.calendar tr td.calendarTodayLinked a {display:block;padding:2px;color:#fff;text-decoration:none;}
+table.calendar tr td.calendarTodayLinked a:hover {display:block;padding:2px;text-decoration:none;}
+
+/* --- Category Tree Select Box --- */
+div.k2CategorySelectBlock form select {width:auto;}
+div.k2CategoriesListBlock ul li a span.catTitle {padding-right:4px;}
+div.k2CategoriesListBlock ul li.activeCategory a {font-weight:bold;}
+
+
+/* --- Search Box --- */
+div.k2SearchBlock {position:relative;}
+div.k2SearchBlock form {margin-bottom: 0;}
+div.k2SearchBlock input[type="text"] {width: 100%;height: auto;padding: 10px 15px;margin-bottom: 0;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;  font-size: 14px;color: #444;}
+div.k2SearchBlock input[type="submit"], 
+div.k2SearchBlock input[type="image"] {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	-webkit-appearance: none;
+	text-indent: -999px;
+	overflow: hidden;
+	width: 60px;
+	cursor: pointer;
+	outline: none;
+	-webkit-box-sizing: border-box !important;
+	box-sizing: border-box;
+	background-color: transparent;
+	border: 0;
+	z-index: 2;
+}
+form.k2SearchBlockForm:after {
+	content: "\f002";
+	position: absolute;
+	top: 12px;
+	right: 14px;
+	text-align: center;
+	font-family: FontAwesome;
+	font-size: 15px;
+	color: #444;
+	z-index: 1;
+}
+div.k2SearchBlock form input.k2SearchLoading {background:url(../images/system/searchLoader.gif) no-repeat 100% 50%;}
+div.k2SearchBlock div.k2LiveSearchResults {display:none;background:#fff;position:absolute;z-index:99;border:1px solid #ccc;margin-top:-1px;}
+
+/* Live search results (fetched via ajax) */
+div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults {list-style:none;margin:0;padding:0;}
+div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults li {border:none;margin:0;padding:0;}
+div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults li a {display:block;padding:1px 2px;border-top:1px dotted #eee;}
+div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults li a:hover {background:#fffff0;}
+
+
+
+/* --- Tag Cloud --- */
+body div.k2TagCloudBlock {font-size: 12px;padding:8px 0;}
+body div.k2TagCloudBlock a {
+	font-size: 11px;
+    line-height: 11px;
+    text-transform: uppercase;
+    color: #FFF;
+    margin-right: 3px;
+    text-decoration: none !important;
+    display: inline-block;
+    margin-bottom: 6px;
+    padding: 6px 10px;
+    border-radius: 2px;
+    letter-spacing: 2px;
+}
+body div.k2TagCloudBlock a:hover {}
+
+/*k2 users style*/
+.ubUserAvatar {float: left;height: 62px;margin-right: 10px;position: relative;overflow: hidden;width: 62px;}
+.ubUserAvatar img {display: block;height: 62px !important;position: absolute;left: 0;top: 0;width: 62px !important;border: none !important;margin: 0px;padding: 0px;}
+
+/* --- Categories --- */
+div.k2CategoriesListBlock > ul {
+	padding-left: 0;
+	list-style-type: none;
+	margin-bottom: 0;
+}
+div.k2CategoriesListBlock a {color: #444;text-decoration: none !important;font-size: 14px;text-transform: uppercase;}
+div.k2CategoriesListBlock a:hover {color: #666;}
+div.k2CategoriesListBlock > ul li {
+	padding: 15px 0;
+	position: relative;
+	border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+div.k2CategoriesListBlock > ul > li:last-child {
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+div.k2CategoriesListBlock ul li ul li:first-child {
+	padding-top: 15px;
+}
+div.k2CategoriesListBlock > ul li:after {
+	position: absolute;
+	font-family: FontAwesome;
+	content: "\f105";
+	right: 0;
+	top: 50%;
+	font-size: 18px;
+	color: #999;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+/*-----------------------------------
+k2 blog category/single page style
+------------------------------------*/
+body:not([class*="tm-sidebar-"]) .k2ItemDetails, 
+body:not([class*="tm-sidebar-"]) .catItemDetails {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+body:not([class*="tm-sidebar-"]) div.ItemBlog div.itemImageBlock, 
+body:not([class*="tm-sidebar-"]) div.catItemBlog div.catItemImage {
+	text-align: center;
+}
+
+div.catItemBlog {position: relative; overflow: hidden; margin-bottom: 100px;}
+div.catItemBlog div.blog-info-block .itemRatingLog {font-size: 18px;}
+div.catItemBlog > div > div.catDetailHolder {padding: 25px !important;}
+div.catItemToolbar {font-size: 13px;}
+div.itemToolbar, div.catItemToolbar {
+	font-size: 12px;
+	color: #000;
+	text-transform: uppercase;
+}
+div.catItemToolbar a {
+	color: #555;
+}
+div.catItemToolbar a:hover {
+	color: #888;
+}
+div.itemToolbar i[class*="uk-icon"] {margin-right: 5px;font-size: 14px;}
+div.catItemBlog .catItemToolbar > span, div.catItemBlog .catItemToolbar > div {display: inline-block;position: relative;padding-right: 10px;margin-right: 5px;}
+div.catItemBlog div.blog-content-block .catItemCommentsLink {margin-right: 0;padding-right: 0;border-right: none;}
+div.catItemBlog div.blog-content-block .catItemLinks ul li {line-height: 14px;}
+div.catItemBlog div.blog-content-block .catItemReadMore {margin-top: 25px;display: inline-block;}
+div.catItemBlog div.blog-content-block div.catItemImage a, div.ItemBlog div.blog-content-block div.itemImage > a {position: relative;display: block;overflow: hidden;-webkit-box-sizing: border-box;box-sizing: border-box;}
+div.catItemBlog .blog-info-block, 
+.ItemBlog .blog-info-block .catDateItemBlock {position: absolute;bottom: 0;right: 0;padding: 17px 30px 17px 20px;background-color: rgba(0,0,0,0.5);border-radius: 15px 0 0 0;}
+div.catItemBlog .catItemImageBlock {position: relative;}
+div.catItemBlog .catItemDetails {z-index: 10;position: relative;}
+.catItemBlog:not(.hasCatImage) {background-color: #F1F1F1;}
+.catItemBlog:not(.hasCatImage) h3.catItemTitle {border-color: #515151; }
+.catItemBlog:not(.hasCatImage) a {color: #444;}
+div.catItemBlog .blog-info-block span.catItemDateCreated, 
+.ItemBlog .blog-info-block .catItemDateCreated {width: 100%;height: 100%;display: block;padding: 10px 8px;border: 1px solid rgba(255, 255, 255, 0.3);border-radius: 50%;text-align: center;text-transform: uppercase;}
+.itemToolbar a {color: #444; text-decoration: none !important;}
+.itemToolbar a:hover {color: #000;}
+.ItemBlog .itemTitle, div.catItemBlog .catItemTitle {
+	font-size: 22px;
+	line-height: 30px;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+	margin-top: 5px;
+	color: #444;
+}
+div.catItemBlog .catItemTitle {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.ItemBlog .itemTitleWrap, .catItemBlog .catItemHeader {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 25px;
+}
+.ItemBlog span.catItemDateCreated, 
+.catItemBlog span.catItemDateCreated {
+    padding: 7px 24px;
+    float: left;
+    background: #333333;
+    text-align: center;
+    color: #fff;
+    margin-right: 25px;;
+}
+.ItemBlog span.catItemDateCreated > span, 
+.catItemBlog span.catItemDateCreated > span {
+	display: block;
+}
+.ItemBlog span.catItemDateCreated .blog-date, 
+.catItemBlog span.catItemDateCreated .blog-date {
+	margin-top: 8px;
+	font-size: 22px;
+	font-weight: bold;
+}
+.ItemBlog span.catItemDateCreated .blog-month, 
+.catItemBlog span.catItemDateCreated .blog-month {
+	font-size: 12px;
+}
+
+.k2FontResize {
+	display: inline-block;
+}
+.itemToolbar > div, .itemToolbar > span {position: relative;padding-right: 10px;margin-right: 5px;}
+ul.itemTags h3 {margin-bottom: 25px;font-size: 22px;font-weight: 500;}
+.ItemBlog ul.itemTags li {display: inline-block;}
+ul.itemTags {list-style: none;padding-left: 0;}
+.catItemShareBlock ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+    display: table;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+}
+.catItemShareBlock ul li {
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+}
+.catItemShareBlock ul li {
+    border-left: 1px solid #e5e5e5;
+    width: 20%;
+}
+
+.catItemShareBlock ul li:first-child {
+    border-left: none;
+}
+.catItemShareBlock ul li a {
+	display: block;
+	padding: 10px;
+}
+.itemToolbar .itemTagsBlock {display: inline-block;}
+
+div.catItemBlog  div.catItemImage {
+	padding-bottom: 45px;
+}
+
+
+
+
+/*Portfolio category*/
+div.catPortfolio {
+	margin-bottom: 35px;
+}
+div.catPortfolio .catItemTitle {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 17px;
+    max-width: 400px;
+}
+div.catPortfolio .catItemTitle a {text-decoration: none;}
+div.catPortfolio div.catPortfolioMeta {
+    margin-bottom: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+div.catPortfolio div.catPortfolioMeta * {
+	text-decoration: none;
+	color: #b1b1b1;
+}
+div.catPortfolio .itemCategory {
+	padding-right: 10px;
+}
+
+/*-- portfolio single page design --*/
+.IpInfoBlock {
+	padding: 25px;
+	background-color: #f7f7f7;
+}
+.IpInfoBlock ul {
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+}
+.IpInfoBlock ul li {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #666;
+}
+.IpInfoBlock .catItemShareBlock ul li  {
+	font-size: 16px;
+	padding-bottom: 0 !important;
+}
+.IpInfoBlock ul li:last-child {
+	padding-bottom: 0;
+}
+.IpInfoBlock .itemRatingLog {
+	float: left;
+}
+.IpInfoBlock .portfolio-meta {
+	margin-bottom: 35px;
+}
+.ItemPortfolioDesc {
+    margin-top: 50px;
+}
+.ItemPortfolio h2.itemTitle {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+.ItemPortfolio .pLabel {
+	color: #444;
+	font-weight: bold;
+	display: inline-block;
+	width: 150px;
+	float: left;
+}
+.ItemPortfolio .itemExtraFieldsValue {
+	margin-left: 150px;
+}
+.ItemPortfolio .uk-list-line>li {
+	padding: 10px 0 !important;
+	margin: 0 !important;
+}
+.ItemPortfolio .uk-list-line>li:first-child {
+    padding-top: 0px !important;
+}
+.ItemPortfolioToolbar .itemRatingList {
+	margin-top: 1px;
+	padding: 0 !important;
+}
+.ItemPortShareBlock {margin-top: 50px;}
+.ItemPortShareBlock ul {
+	list-style: none;
+	padding-left: 0;
+}
+.ItemPortShareBlock ul li {
+	display: inline-block;
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+.ItemPortShareBlock h3 {
+	border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+}
+/*k2 users block design*/
+div.k2UsersBlock ul {padding-left: 0;}
+div.k2UsersBlock ul li {list-style-type: none;}
+div.k2UsersBlock ul li a.ubUserName {margin-bottom: 10px;display: block;text-decoration: none;color: #000;}
+div.k2UsersBlock ul li a.ubUserName:hover {color: #727674;}
+div.k2UsersBlock ul li h3 {clear:both;margin:8px 0 0 0;padding:0;}
+a.ubUserFeedIcon,
+a.ubUserFeedIcon:hover {display:inline-block;margin:0 2px 0 0;padding:0;width:16px;height:16px;background:url(../images/system/feed-icon-14x14.gif) no-repeat 50% 50%;}
+a.ubUserFeedIcon span,
+a.ubUserFeedIcon:hover span {display:none;}
+a.ubUserURL,
+a.ubUserURL:hover {display:inline-block;margin:0 2px 0 0;padding:0;width:16px;height:16px;background:url(../images/system/globe.png) no-repeat 50% 50%;}
+a.ubUserURL span,
+a.ubUserURL:hover span {display:none;}
+span.ubUserEmail {display:inline-block;margin:0 2px 0 0;padding:0;width:16px;height:16px;background:url(../images/system/mail.png) no-repeat 50% 50%;overflow:hidden;}
+span.ubUserEmail a {display:inline-block;margin:0;padding:0;width:16px;height:16px;text-indent:-9999px;}
+
+/* --- Rating --- */
+.itemRatingForm {display:block;margin-top:2px;float:left;}
+.itemRatingLog {float: left;line-height: 19px;padding: 0 0 0 5px;margin-top: -2px;}
+div.itemRatingForm .formLogLoading {
+	background: url(../images/system/loading.gif) no-repeat right center;
+	padding: 0 0 0 5px;
+	min-height: 18px;
+	min-width: 50px;
+}
+.itemRatingList { background: url("../images/transparent_star.png") left 0px repeat-x; position:relative;float:left;width: 70px;height: 14px;overflow:hidden;list-style:none;margin:0;padding:0;}
+.itemRatingList a:hover, .itemRatingList .itemCurrentRating {
+ 	background: url('../images/transparent_star.png') left -9999em repeat-x;
+}
+.itemRatingList a,
+.itemRatingList .itemCurrentRating {position:absolute;top:0;left:0;text-indent:-1000px;height:25px;line-height:25px;outline:none;overflow:hidden;border:none;cursor:pointer;color: transparent !important;}
+.itemRatingList a:hover {background-position: left -28px;text-decoration: none !important;}
+.itemRatingList a.one-star {width:20%;z-index:6;}
+.itemRatingList a.two-stars {width:40%;z-index:5;}
+.itemRatingList a.three-stars {width:60%;z-index:4;}
+.itemRatingList a.four-stars {width:80%;z-index:3;}
+.itemRatingList a.five-stars {width:100%;z-index:2;}
+span.siteRoot {display:none;}
+div.catItemRatingBlock span {display:block;float:left;font-style:normal;padding:0 4px 0 0;margin:0;}
+div.itemRatingBlock {display: inline-block;vertical-align: middle;}
+div.project-Single-item div.itemRatingForm {margin: 0;}
+div.project-Single-item div.itemRatingBlock {display: inline-block;vertical-align: text-top;}
+div.itemRatingBlock span {display:block;float:left;font-style:normal;padding:0 4px 0 0;margin:0;color:#999;}
+
+.itemRatingBlock .itemRatingForm .itemRatingList a.one-star {width: 14px;z-index: 6;}
+.itemRatingBlock .itemRatingForm .itemRatingList .itemCurrentRating {position: absolute;top: 0;left: 0;text-indent: -9999em;height: 14px;line-height: 14px;outline: none;overflow: hidden;border: none;cursor: pointer;font-size: 0px !important;text-decoration: none !important;z-index: 1;background-position: 0 center;margin: 0;padding: 0;}
+
+
+/* quix style */
+.qx-element-joomla-module .k2RecentPost h3.k2RecentTite {
+	font-weight: 300;
+	font-size: 17px;
+}
+.qx-element-joomla-module .k2RecentPost .k2RecentImg {
+    width: 210px;
+}
+.qx-element-joomla-module .k2RecentPost .k2RecentDate {
+    text-transform: uppercase;
+}
+.qx-element-joomla-module .k2RecentPost .k2RecentItem {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* Tablet Modes */
+@media only screen and (min-width: 480px) and (max-width: 979px) {
+	div.itemAuthorLatest, .itemRelated {
+		width: 100% !important;
+		padding: 0 !important;
+	}
+	.OwnfolioBPost .blog-post > .blog-post-item {
+		width: 50%;
+	}
+}
+
+/* Tablet Modes */
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+	div.k2Pagination ul li {padding: 8px 16px;}
+}
+
+
+/*Mobile Modes*/
+@media (max-width: 767px) {
+	div.itemCommentsForm form input.inputbox {width: 100%;padding: 5px 0px 5px 2px;}
+	div.itemCommentsForm form [class*='uk-width-']{width: 100%;float: none;}
+	.catProjectView {width: 100% !important;}
+	.catProject-Image-Block img {width: 100% !important;}
+	body #comment-form div[class*="uk-width"]:nth-child(n+2) {
+		padding-left: 25px;
+	}
+	div.itemCommentsForm form textarea.inputbox {
+		margin-top: 0;
+	}
+	body #comment-form div[class*="uk-width"] {
+		margin-bottom: 15px;
+	}
+	.OwnfolioBPost .blog-post > .blog-post-item:nth-child(n+5) {
+		display: none;
+	}
+	div.tagItemImageBlock {
+		width: 100%;
+		padding-right: 0;
+		margin-bottom: 35px;
+	}
+	div.tagItemIntroText {
+	    width: 100%;
+	}
+}
+
+
+/*mobile Screen Mobile Modes*/
+@media only screen and (max-width: 1220px) {
+	div.item-Author-Latest-Related {
+		margin-left: 0 !important;
+	}
+}
+
+/*Mobile Modes*/
+@media (max-width: 480px) {
+	div.itemAuthorLatest, .itemRelated {
+		width: 100% !important;
+		padding: 0 !important;
+	}
+	div.k2Pagination ul li {padding: 5px 10px;}
+	div.itemAuthorBlock {display: block;}
+	div.itemAuthorBlock img {float: none !important;display: block !important;margin-bottom: 35px !important;}
+	div.itemToolbar {
+		margin-top: 20px;
+	}
+	.OwnfolioBPost .blog-post > .blog-post-item {
+		width: 100%;
+		float: none;
+		clear: both;
+	}
+	div.itemAuthorBlock img.itemAuthorAvatar {
+		float: none;
+	}
+	div.itemAuthorBlock div.itemAuthorDetails {
+		margin-left: 0;
+	}
+}
+
+/*Very Small Screen Mobile Modes*/
+@media only screen and (max-width: 340px) {
+}
